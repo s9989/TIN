@@ -1,0 +1,124 @@
+a {
+    color: black;
+}
+
+body {
+
+    background-color: #f2f2f2;
+
+    @media screen and (max-width: 1200px) {
+        background-color: white;
+    }
+}
+
+body .content {
+    background-color: white;
+    box-shadow: 0 0 15px #bbb;
+
+    max-width: 1200px;
+    min-width: $break-mobile;
+    margin: 40px auto 0;
+
+    @media screen and (max-width: 1200px) {
+        margin-top: 0;
+        box-shadow: none;
+    }
+}
+
+body .content .inner {
+    padding: 20px;
+}
+
+body .header {
+    margin-bottom: 20px;
+}
+
+body .header .lead {
+    text-align: center;
+}
+
+body .header .lead .title {
+    font-family: 'Nova Square', cursive;
+    font-size: 120px;
+
+    color: #3e3e3e;
+    padding: 10px 0;
+
+    @media screen and (max-width: 700px) {
+        font-size: 56px;
+    }
+}
+
+body .header .lead .caption {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+body.welcome .wrapper .presentation {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+body.welcome .wrapper .presentation .box {
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+body.welcome .wrapper .presentation .box img {
+    display: block;
+    margin: 0 auto;
+    max-width: 360px;
+    width: 100%;
+    min-width: 200px;
+
+}
+
+body.welcome .wrapper .presentation .box .description {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    padding: 10px 0;
+
+    @media screen and (max-width: 700px) {
+        font-weight: 300;
+        font-size: 16px;
+    }
+}
+
+body.welcome .wrapper .actions {
+    text-align: center;
+}
+
+body.welcome .wrapper .actions a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    display: block;
+    padding: 10px 0;
+}
+
+body.welcome .wrapper .actions a.button {
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: #2a72cc;
+    color: white;
+}
+
+.button:hover {
+    transition: background-color 0.5s ease;
+    background-color: #274b96;
+}
+
+.default:hover {
+    transition: color 0.5s ease;
+    color: #2a72cc;
+}
+
