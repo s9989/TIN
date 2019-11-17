@@ -1,0 +1,280 @@
+body {
+    background-color: #f2f2f2;
+}
+
+body.empty {
+    background: #7babf7 url('../img/background.jpg') fixed no-repeat center center;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #649af4;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #4285f4;
+    min-height: 50px;
+    box-shadow: #313131 0 0 10px;
+}
+
+.header > .lefty > .menu-icon {
+    display: block;
+    cursor: pointer;
+    float: left;
+    margin-right: 16px;
+}
+
+.header > .lefty .logo {
+    font-family: 'Nova Square', cursive;
+    font-size: 20px;
+    color: white;
+}
+
+.header > .lefty span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+    line-height: 24px;
+    padding-left: 13px;
+    text-transform: uppercase;
+}
+
+.header .lefty, .header .righty {
+    padding: 13px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header + .content {
+    margin-top: 50px;
+}
+
+.content > .wrapper {
+    padding-top: 20px;
+
+    transition: padding-left 0.2s ease-out;
+    padding-left: 0;
+}
+
+@media screen and (min-width: 622px) {
+    .content > .wrapper.collapsed {
+        padding-left: 242px;
+    }
+}
+
+.content > .lefty {
+    background-color: #f2f2f2;
+}
+
+.content > .lefty > .menu {
+
+    padding-top: 20px;
+    margin: 0 13px 0 -242px;
+    min-width: 216px;
+
+    transition: margin-left 0.2s ease-out;
+}
+
+.content > .lefty > .menu.expanded {
+    margin-left: 0;
+}
+
+.content > .lefty > .menu > li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+
+}
+
+.content > .lefty > .menu > li:hover {
+    cursor: pointer;
+}
+
+.content > .lefty > .menu > li:hover, .content > .lefty > .menu > li.active {
+    background-color: #ddd;
+}
+
+.content > .lefty > .menu > li > a {
+    color: black;
+    line-height: 40px;
+    padding: 0 12px 0 16px;
+    display: block;
+}
+.content > .lefty > .menu > li > a span {
+    padding-left: 24px;
+}
+
+.content > .lefty > .menu > li > a > .material-icons {
+    vertical-align: middle;
+}
+
+.content > .lefty > .menu > li.profits .material-icons {
+    color: #58a200;
+}
+.content > .lefty > .menu > li.costs .material-icons {
+    color: #d8382a;
+}
+.content > .lefty > .menu > li.insurance .material-icons {
+    color: #f3aa01;
+}
+.content > .lefty > .menu > li.companies .material-icons {
+    color: black;
+}
+.content > .lefty > .menu > li.report .material-icons {
+    color: #1454a9;
+}
+
+.content .caption {
+    margin: 20px 20px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+.content .caption:first-child {
+    margin-top: 0;
+}
+
+.content section {
+    background-color: white;
+    box-shadow: #ddd 0 2px 5px;
+    margin: 0 20px;
+}
+
+.content section.last {
+    margin-bottom: 20px;
+}
+
+.content section > div:not(.anchor) {
+    padding: 20px;
+}
+
+    
+.content section > div.anchor > a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: block;
+    padding: 20px;
+}
+
+.content section > div.anchor:not(:first-child) {
+    border-top: solid 1px #ddd;
+}
+
+.content section > div.anchor > .menu {
+    float: right;
+    display: none;
+    padding: 20px;
+}
+
+.content section > div.anchor > .menu a {
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.content section > div.anchor > .menu a .material-icons {
+    color: #bdbdbd;
+}
+
+.content section > div.anchor:hover > .menu {
+    display: block;
+}
+
+div.fieldset .label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #666;
+}
+
+div.fieldset .value {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.document.element .date {
+    color: #999999;
+    margin-right: 16px;
+}
+
+.new {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.new a {
+    padding: 10px;
+    background-color: #d23f31;
+    display: block;
+    border-radius: 50%;
+}
+
+.new a i {
+    display: block;
+    color: white;
+}
+
+form {
+
+    padding: 20px;
+}
+
+form > div > div {
+    position: relative;
+    height: 58px;
+    margin-bottom: 10px;
+}
+
+form > div > div > label {
+    display: block;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #666;
+    font-size: 12px;
+    padding: 2px 0;
+}
+
+form > div > div > span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: red;
+}
+
+form > div > div > div, 
+form > div > div > input, 
+form > div > div > select, 
+form > div > div > button {
+    width: 98%;
+    padding: 4px 1%;
+
+    left: 0;
+    right: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+form > div > div > select, form > div > div > button {
+    width: 100%;
+}
+
+form > div > div input[type="text"],
+form > div > div input[type="number"],
+form > div > div select {
+    border: solid 1px #ddd;
+}
+

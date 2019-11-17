@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Panel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="build/css/cf.css">
+	<link rel="stylesheet" href="build/css/common.css">
+	<link rel="stylesheet" href="build/css/app.css">
+
+	<script src="build/js/app.js"></script>
+	
+</head>
+<body class="" id="body">
+	<div class="header">
+		<div class="lefty">
+			<i class="material-icons white menu-icon">menu</i>
+			<a class="logo" href="home.html">KAHANIEL</a>
+			<span></span>
+		</div>
+		<div class="wrapper">
+		</div>
+		<div class="righty">
+			<a href="logowanie.html"><i class="material-icons white logout-icon">close</i></a>
+		</div>
+	</div>
+	<div class="content">
+		<div class="lefty">
+			<ul class="menu">
+				<li class="profits"><a href="profits.html"><i class="material-icons">show_chart</i><span>Zyski</span></a></li>
+				<li class="costs"><a href="costs.html"><i class="material-icons rtl">show_chart</i><span>Koszta</span></a></li>
+				<li class="insurance"><a href="social_insurance.html"><i class="material-icons">account_circle</i><span>ZUS</span></a></li>
+				<li class="companies"><a href="list.html"><i class="material-icons">person</i><span>Kontrahenci</span></a></li>
+				<li class="report"><a href="reports.html"><i class="material-icons">event_note</i><span>Raport</span></a></li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<section>
+				<form action="company_edit.html" name="company" method="post">
+					<div id="company">
+						<div >
+							<label for="company_nip" class="required">NIP</label>
+							<input type="text" id="company_nip" name="company[nip]" data-required="true" data-regex="nip" data-maxlength="20" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_name" class="required">Nazwa</label>
+							<input type="text" id="company_name" name="company[name]" data-required="true" data-minlength="2" data-maxlength="100" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_firstName">Imię</label>
+							<input type="text" id="company_firstName" name="company[firstName]" data-maxlength="50" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_lastName">Nazwisko</label>
+							<input type="text" id="company_lastName" name="company[lastName]" data-maxlength="100" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_street" class="required">Ulica</label>
+							<input type="text" id="company_street" name="company[street]" data-required="true" data-maxlength="120" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_houseNumber" class="required">Numer domu</label>
+							<input type="text" id="company_houseNumber" name="company[houseNumber]" data-required="true" data-minlength="1" data-maxlength="10" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_apartamentNumber">Numer mieszkania</label>
+							<input type="text" id="company_apartamentNumber" name="company[apartamentNumber]" data-maxlength="10" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_postCode" class="required">Kod pocztowy</label>
+							<input type="text" id="company_postCode" name="company[postCode]" data-required="true" data-regex="post_code" data-maxlength="10" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_city" class="required">Miasto</label>
+							<input type="text" id="company_city" name="company[city]" data-required="true" data-minlength="2" data-maxlength="100" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_email">Email</label>
+							<input type="text" id="company_email" name="company[email]" data-regex="email" data-maxlength="100" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<label for="company_phone">Telefon</label>
+							<input type="text" id="company_phone" name="company[phone]" data-regex="phone" data-maxlength="20" />
+							<span class="error"></span>
+						</div>
+						<div >
+							<button type="submit" id="company_save" name="company[save]">Zapisz</button>
+						</div>
+						<input type="hidden" id="company__token" name="company[_token]" value="0iXW0mxqwE0gywmFIoh_OFdBaGlJ2tjn4D6thRbJ948" />
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

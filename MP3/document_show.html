@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Panel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="build/css/cf.css">
+	<link rel="stylesheet" href="build/css/common.css">
+	<link rel="stylesheet" href="build/css/app.css">
+
+	<script src="build/js/app.js"></script>
+
+</head>
+<body class="" id="body">
+	<div class="header">
+		<div class="lefty">
+			<i class="material-icons white menu-icon">menu</i>
+			<a class="logo" href="home.html">KAHANIEL</a>
+			<span>Edycja dokumentu</span>
+		</div>
+		<div class="wrapper">
+		</div>
+		<div class="righty">
+			<a href="logowanie.html"><i class="material-icons white logout-icon">close</i></a>
+		</div>
+	</div>
+	<div class="content">
+		<div class="lefty">
+			<ul class="menu">
+				<li class="profits"><a href="profits.html"><i class="material-icons">show_chart</i><span>Zyski</span></a></li>
+				<li class="costs"><a href="costs.html"><i class="material-icons rtl">show_chart</i><span>Koszta</span></a></li>
+				<li class="insurance"><a href="social_insurance.html"><i class="material-icons">account_circle</i><span>ZUS</span></a></li>
+				<li class="companies"><a href="list.html"><i class="material-icons">person</i><span>Kontrahenci</span></a></li>
+				<li class="report"><a href="reports.html"><i class="material-icons">event_note</i><span>Raport</span></a></li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<section>
+				<form action="costs.html" name="document" method="post" novalidate="novalidate">
+					<div id="document">
+						<input type="hidden" id="document_type" name="document[type]" value="1" />
+						<div>
+							<label for="document_category" class="required">Kategoria</label>
+							<input readonly="readonly" type="text" id="document_category" name="document[category]" required="required" value="Faktura VAT" />
+						</div>
+						<div >
+							<label for="document_title" class="required">Tytuł</label>
+							<input readonly="readonly" type="text" id="document_title" name="document[title]" required="required" maxlength="50" value="Wykonanie usług w zakresie IT" />
+						</div>
+						<div >
+							<label for="document_description">Opis</label>
+							<input readonly="readonly" type="text" id="document_description" name="document[description]" maxlength="255" value="Usługi na rzecz pracodawcy" />
+						</div>
+						<div >
+							<label for="document_number" class="required">Numer</label>
+							<input readonly="readonly" type="text" id="document_number" name="document[number]" required="required" maxlength="40" value="2019/11/01" />
+						</div>
+						<div >
+							<label for="document_accountNumber">Numer konta</label>
+							<input readonly="readonly" type="text" id="document_accountNumber" name="document[accountNumber]" maxlength="60" value="01 2222 3333 0000 1100 2200 3300" />
+						</div>
+						<div >
+							<label for="document_issueDate" class="required">Data wystawienia</label>
+							<input readonly="readonly" type="text" id="document_issueDate" name="document[issueDate]" required="required" class="js-datepicker" value="16.11.2019" />
+						</div>
+						<div >
+							<label for="document_paymentDate" class="required">Data płatności</label>
+							<input readonly="readonly" type="text" id="document_paymentDate" name="document[paymentDate]" required="required" class="js-datepicker" value="16.11.2019" />
+						</div>
+						<div >
+							<label for="document_place" class="required">Miejsce</label>
+							<input readonly="readonly" type="text" id="document_place" name="document[place]" required="required" maxlength="40" value="Warszawa" />
+						</div>
+						<div >
+							<label for="document_net" class="required">Netto</label>
+							<input readonly="readonly" type="number" id="document_net" name="document[net]" required="required" step="0.01" value="100" />
+						</div>
+						<div >
+							<label for="document_taxPercent" class="required">Podatek(%)</label>
+							<input readonly="readonly" type="number" id="document_taxPercent" name="document[taxPercent]" required="required" value="23" />
+						</div>
+						<div >
+							<label for="document_tax" class="required">Podatek</label>
+							<input readonly="readonly" type="number" id="document_tax" name="document[tax]" required="required" step="0.01" value="23" />
+						</div>
+						<div >
+							<label for="document_gross" class="required">Brutto</label>
+							<input readonly="readonly" type="number" id="document_gross" name="document[gross]" required="required" step="0.01" value="123" />
+						</div>
+						<div >
+							<label for="document_buyer">Kupujący</label>
+							<input readonly="readonly" type="text" id="document_buyer" name="document[buyer]" required="required" value="Jan Kowalski" />
+						</div>
+						<div >
+							<label for="document_seller">Sprzedający</label>
+							<input readonly="readonly" type="text" id="document_seller" name="document[seller]" required="required" value="Jan Kowalski" />
+						</div>
+						<input type="hidden" id="document__token" name="document[_token]" value="oJA3yQ4tUorw3cl8rVpZMagpso-0SrcF7WOa832G33o" />
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
